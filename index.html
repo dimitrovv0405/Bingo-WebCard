@@ -8,10 +8,15 @@
 </head>
 <body>
     <header id="header">
-        <h1>Bingo Bloom</h1>
         <nav>
             <a href="https://eastmeadow.info/wp-content/uploads/2023/08/bingo-instructions.pdf" id="bingo-instructions">
                 <button><img src="pics/tutorial.png" alt="Game Info Image"></button>
+            </a>
+        </nav>
+        <h1><span id="star" style="color: rgb(255 225 173);">✦</span><span>Bingo</span> Bloom<span id="star" style="color: rgb(255 225 173);">✦</span></h1>
+        <nav>
+            <a href="pics/3a2cba23-19cb-4f1c-9dba-4d1b0c9050e6.jpg" id="bingo-profile">
+                <button><img src="pics/3a2cba23-19cb-4f1c-9dba-4d1b0c9050e6.jpg" alt="Your Beautiful Face"></button>
             </a>
         </nav>
     </header>
@@ -20,15 +25,26 @@
         <div id="bingo-card-container">
             <div id="bingo-card">
                 <!--Bingo Header Cells-->
-                <div class="bingo-cell header-cell">B</div>
-                <div class="bingo-cell header-cell">I</div>
-                <div class="bingo-cell header-cell">N</div>
-                <div class="bingo-cell header-cell">G</div>
-                <div class="bingo-cell header-cell">O</div>
+                <div class="bingo-cell header-cell" id="cell-B">B</div>
+                <div class="bingo-cell header-cell" id="cell-I">I</div>
+                <div class="bingo-cell header-cell" id="cell-N">N</div>
+                <div class="bingo-cell header-cell" id="cell-G">G</div>
+                <div class="bingo-cell header-cell" id="cell-O">O</div>
+
+                <!--Bingo Number Cells will be generated using JavaScript-->
+            </div>
+
+            <!--Container To Keep Clicked Numbers-->
+            <div id="numbers-clicked-container">
+                <h2><span id="star" style="color: rgb(255 225 173);">✦</span><span>Numbers</span> Clicked<span id="star" style="color: rgb(255 225 173);">✦</span></h2>
+                <div id="numbers-clicked">
+                    <textarea id="clicked-numbers-textarea" rows="10" cols="30" readonly></textarea>
+                </div>
             </div>
             <button id="new-card-button">Start New Game</button>
         </div>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>

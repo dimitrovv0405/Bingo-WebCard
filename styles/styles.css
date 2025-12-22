@@ -1,4 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: rgb(201 146 234);
+    height: 100%;
+    padding: 20px;
+    width: 100%;
+}
+
+header h1 span {
+  font-family: "Edu NSW ACT Cursive", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: rgb(254 234 203);
+}
+
+header #star {
+    font-size: 3.0rem;
+    margin: 10px 50px;
+    z-index: 1;
+    text-shadow: 2px 2px 0px #D8C4EB;
+}
+
+header h1 {
+    font-size: 4.0rem;
+    margin: 10px 20px;
+    z-index: 2;
+    text-shadow: 2px 2px 0px #D8C4EB;
+    color: rgb(254 234 203);
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    width: max-content;
+}
+
+header nav {
+    position: absolute;
+    left: 200px;
+}
+
+header nav:last-child {
+    position: absolute;
+    left: auto;
+    right: 200px;
+}
+
+#bingo-profile img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#bingo-profile button {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    border: none;
+    background: rgb(252 176 204);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+#bingo-profile button:hover {
+    box-shadow: 10px 10px 15px pink;
+}
+
+#bingo-instructions button {
+    width: 80px;
+    height: 80px;
+    padding: 2px;
+    border: none;
+    background: rgb(252 176 204);
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+#bingo-instructions img {
+    width: 40px;
+    height: 40px;
+}
+
+#bingo-instructions button:hover {
+    background-color: rgb(255 140 175);
+}
+
+#new-card-button {
+    cursor: pointer;
+    padding: 20px;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    background-color: rgb(252 179 124);
+    border: none;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    position: relative;
+    left: 15px;
+}
+
+#new-card-button:hover {
+    background-color: rgb(255 140 90);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgb(247 211 242);
+}
+
+#bingo-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+#bingo-card {
+    display: grid;
+    grid-template-columns: repeat(5, 150px);
+    grid-template-rows: 100px repeat(5, 150px);
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    border: solid 2px rgb(226 188 168);
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.bingo-cell {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    font-family: "Mulish", sans-serif;
+    font-weight: 700;
+}
+
+.header-cell {
+    font-family: "Mulish", sans-serif;
+    border-bottom: 2px solid rgb(226 188 168);
+}
+
+.header-cell#cell-B {
+    background-color:rgb(201 146 234);
+    color: rgb(157, 97, 185);
+}
+
+.header-cell#cell-I {
+    background-color: rgb(252 176 233);
+    color: rgb(207 95 180);
+}
+
+.header-cell#cell-N {
+    background-color: rgb(255 179 204);
+    color: rgb(255 99 178);
+}
+
+.header-cell#cell-G {
+    background-color: rgb(255 203 155);
+    color: rgb(255 140 90);
+}
+
+.header-cell#cell-O {
+    background-color: rgb(255 229 153);
+    color: rgb(255 195 0);
+}
+
+.bingo-cell:not(.header-cell) {
+    background-color: rgb(253 227 209);
+    border: 1px solid rgb(226 188 168);
+    color: #B39DDB;
+    cursor: pointer;
+}
+
+#numbers-clicked-container {
+    position: absolute;
+    margin-top: 30px;
+    padding: 20px;
+    left: 20px;
+    background-color: rgb(255 240 245);
+    border-radius: 10px;
+}
+
+#numbers-clicked-container h2 {
+    font-family: "Edu NSW ACT Cursive", cursive;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: rgb(157, 97, 185);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#numbers-clicked-container #star {
+    margin: 0 10px;
+}
+
+#clicked-numbers-textarea {
+    width: 100%;
+    font-family: "Mulish", sans-serif;
+    font-size: 1rem;
+    padding: 10px;
+    border: 2px solid rgb(226 188 168);
+    border-radius: 10px;
+    resize: none;
+    color: rgb(179 91 60);
 }
