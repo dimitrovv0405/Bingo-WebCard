@@ -84,47 +84,100 @@
 @media screen and (max-width: 400px) {
     header {
         width: 100%;
-        min-width: 650px;
-        font-size: 10px;
+        min-width: 400px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
     }
 
     header h1 {
-        font-size: 50px;
-        position: relative;
-        left: -10px;
+        font-size: 2rem;
+        margin: 5px 10px;
     }
 
     header #star {
-        margin: 5px 15px;
+        font-size: 1.5rem;
+        margin: 5px 10px;
     }
 
     header nav {
         position: absolute;
-        left: 20px;
+        left: 10px;
     }
 
     header nav:last-child {
         position: absolute;
-        right: 20px;
+        left: auto;
+        right: 10px;
+    }
+
+    #bingo-profile button {
+        width: 40px;
+        height: 40px;
+    }
+
+    #bingo-instructions button {
+        width: 40px;
+        height: 40px;
+    }
+
+    #bingo-instructions img {
+        width: 25px;
+        height: 25px;
+    }
+
+    #bingo-card-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-top: 20px;
     }
 
     #bingo-card {
         position: relative;
-        left: 65px;
-        margin-top: -100px;
-        transform: scale(0.75);
+        transform-origin: top center;
+        margin-top: 0;
+        left: 0;
+        transform: scale(0.5);
     }
 
     #numbers-clicked-container {
-        position: relative;
-        left: 65px;
-        width: 560px;
-        margin-top: -50px;
+        width: 90%;
+        max-width: 380px;
+        margin-top: -400px;
+        left: 0;
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    #numbers-clicked-container h2 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    #numbers-clicked-container #star {
+        font-size: 1rem;
+        margin: 0 5px;
+    }
+
+    #clicked-numbers-textarea {
+        width: 100%;
+        min-width: unset;
+        height: 200px;
+        font-size: 0.9rem;
     }
 
     #new-card-button {
-        position: relative;
-        left: 65px;
-        margin-top: 20px;
+        left: 0;
+        margin-top: 50px;
+        
+    }
+    
+    #new-card-button {
+        padding: 15px;
+        font-size: 1.2rem;
     }
 }
