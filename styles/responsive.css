@@ -85,7 +85,7 @@
 }
 
 /* Small screens */
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 450px) {
     html, body {
         overflow-x: hidden;
     }
