@@ -1,3 +1,4 @@
+/* Large screens */
 @media screen and (max-width: 1200px) {
     html, body {
         margin: 0;
@@ -45,11 +46,12 @@
     }
 }
 
+/* Medium screens */
 @media screen and (max-width: 844px) {
     header nav {
         position: absolute;
         left: 40px;
-        size: 14px;
+        font-size: 14px;
     }
 
     #bingo-profile button {
@@ -70,7 +72,7 @@
     header nav:last-child {
         position: absolute;
         right: 40px;
-        size: 14px;
+        font-size: 14px;
     }
 
     header #star {
@@ -78,9 +80,11 @@
     }
 }
 
+/* Small screens */
 @media screen and (max-width: 400px) {
     header {
-        width: 650px;
+        width: 100%;
+        min-width: 650px;
         font-size: 10px;
     }
 
@@ -97,6 +101,11 @@
     header nav {
         position: absolute;
         left: 20px;
+    }
+
+    header nav:last-child {
+        position: absolute;
+        right: 20px;
     }
 
     #bingo-card {
